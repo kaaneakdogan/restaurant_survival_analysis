@@ -210,7 +210,7 @@ business_summary_survived <- business_summary |>
   group_by(lon_bin, lat_bin, business_id)|>
   slice_min(year, n = 1, with_ties = FALSE)
 
-
+#sanity check
 sum(business_summary_survived$survived) == 1961
 sum(business_summary_survived$did_not_survive) == 1277
 sum(business_summary_survived$survived) + sum(business_summary_survived$did_not_survive) == 3238
@@ -224,6 +224,7 @@ business_summary_survived <- business_summary_survived |>
     .groups = "drop"
   )
 
+#sanity check
 sum(business_summary_survived$survived) == 1961
 sum(business_summary_survived$did_not_survive) == 1277
 sum(business_summary_survived$survived) + sum(business_summary_survived$did_not_survive) == 3238
@@ -239,6 +240,7 @@ grid_summary_test <- business_summary |>
   ) |>
   mutate(year_lag_1 = year + 1)
 
+#sanity check
 sum(grid_summary_test$grid_n_reviews) == 4460847
 
 business_summary |> 
