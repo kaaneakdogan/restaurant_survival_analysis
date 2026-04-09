@@ -15,3 +15,6 @@ all_business <- business |>
   select(business_id, name, categories, latitude, longitude, stars, review_count)
 
 After running the python code, you can proceed with the rest. 
+
+As a note, some functions in MASS and dplyr conflict, not allowing for certain functions to be executed once the glm_prediction script
+is ran in Rstudio. To run some functions in all_quant_analysis after running glm_prediction, disable the MASS package. 
