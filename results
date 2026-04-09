@@ -1,5 +1,9 @@
-I made two logistic regression models, one suggesting a linear relationship, while the other suggesting a non-liner relationship. The non-linear model is a better model, suggesting that aggregated per-restaurant reviews are the best at the third quantile. 
+I made two logistic regression models, one suggesting a linear relationship, while the other suggesting a non-liner relationship. 
+The non-linear model is a better model, suggesting that aggregated per-restaurant reviews are the best at the third quantile. 
 
-I conclude that this is because high-review density is associated with high restaurant density. When there is high restaurant density in a grid, this shows higher competition. Higher competition, even though it is countered by high demand, is not equivalent to medium competition with medium demand or low competition with low demand. When people have limited attention spans, competition can not be countered with demand past a certain point. 
+I conclude that this is because high-review density is associated with high restaurant density. 
+When there is high restaurant density in a grid, this shows higher competition. Higher competition, 
+even though it is countered by high demand, is not equivalent to medium competition with medium demand or low competition with low demand. 
+When people have limited attention spans, competition can not be countered with demand past a certain point. 
 
 Further research is necessary to find why review per business variable is non-linear. 
