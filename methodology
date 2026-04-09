@@ -1,0 +1,19 @@
+Data consists of business data and review data. This project uses business categories, coordinates, times reviews are posted and review stars
+as data. 
+
+A "new restaurant" is classified as a restaurant who received its first review within the timeframe we are specifying. In the context
+of this project, this means any restaurant who received their first review within the months of January and February 
+in years between 2013 and 2018. A "surviving restaurant" is defined as a restaurant who received reviews for three consecutive years after
+their first review. So, a restaurant which opened in 2014 would have to receive reviews in 2015, 2016, and 2017 to be classified as "survived."
+If this condition is not satisfied, then the restaurant is considered "not survived." Assuming a normal distribution of the time for the last
+review of a random restaurant, this project tests for an average of 4.5 years of life for survival.
+
+A "grid" is defined as geospatial data unit composed of business and review data resulting from rounding to two decimal pieces of 
+latitude and longitude values every single restaurant in our dataset and assigning them a latitude and longitude "bin." This results in 
+1.11km x 1.11km "grids" that compose of businesses and the reviews that they received. 
+
+The new restaurant is then associated with the grid information of the previous year immediately preceding the opening of a restaurant,
+enabling us to make predictions about future based on the data that we already have. This also prevent co-mingling of the data of the new
+restaurant with the information of the grid. This is done by "lag-matching" the grid data to the survived-business data. 
+
+Logistic regression is used to create a probabilistic dependent variable. 
