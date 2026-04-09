@@ -8,6 +8,13 @@ their first review. So, a restaurant which opened in 2014 would have to receive 
 If this condition is not satisfied, then the restaurant is considered "not survived." Assuming a normal distribution of the time for the last
 review of a random restaurant, this project tests for an average of 4.5 years of life for survival.
 
+Unnecessary categories are cleaned as well. Some businesses, for some reason, classify them as restaurants even though they are clearly not. 
+Any business with any irrelevant categories are removed from the dataset. 
+
+The reason why 3 years after opening is chosen for survival is because of the research from https://arxiv.org/abs/1410.8603 classifying median
+restaurant survival as 4.5 years. This would make it roughly equal. The reason why 2013 to 2018 is chosen is because of little data availability
+before 2013, and 2018 is the last year that can be used to track reviews for three years after. 
+
 A "grid" is defined as geospatial data unit composed of business and review data resulting from rounding to two decimal pieces of 
 latitude and longitude values every single restaurant in our dataset and assigning them a latitude and longitude "bin." This results in 
 1.11km x 1.11km "grids" that compose of businesses and the reviews that they received. 
@@ -15,5 +22,10 @@ latitude and longitude values every single restaurant in our dataset and assigni
 The new restaurant is then associated with the grid information of the previous year immediately preceding the opening of a restaurant,
 enabling us to make predictions about future based on the data that we already have. This also prevent co-mingling of the data of the new
 restaurant with the information of the grid. This is done by "lag-matching" the grid data to the survived-business data. 
+
+The limitations of this methodology is of course, number one, is not knowing the exact start date of a restaurant. First review can be a sign
+of a new restaurant, but it is not exclusive for a new restaurant. This is a fundamental limitation of this methodology. It is also assumed that
+last reviews follow the normal distribution, even though they may not be. That is also a limitation of this methodology. Last limitation
+is that these results are endogenous to USA. Other countries might display different behavior. 
 
 Logistic regression is used to create a probabilistic dependent variable. 
