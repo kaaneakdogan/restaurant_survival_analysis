@@ -57,3 +57,25 @@ ggplot(pred_grid,
     x = "Reviews Per Business Quantile in a Grid",
     y = "Survival Probability"
   ) 
+## Improved Visual here
+ggplot(pred_grid,
+       aes(x = rpb_bin,
+           y = pred_prob_quantile,
+           group = 1)) +
+  geom_line(color = "#2C7BB6", linewidth = 0.8) +
+  geom_point(color = "#2C7BB6", size = 4) +
+  labs(
+    title = "Restaurant Survival Probability by Review Density",
+    subtitle = "Restaurants in grids with 7–15 reviews per business show highest survival",
+    x = "Reviews Per Business Quantile in a Grid",
+    y = "Survival Probability"
+  ) +
+  scale_y_continuous(limits = c(0.55, 0.68),
+                     labels = scales::percent_format(accuracy = 1)) +
+  theme_minimal(base_size = 13) +
+  theme(
+    plot.title = element_text(face = "bold", size = 14),
+    plot.subtitle = element_text(color = "gray40", size = 11),
+    panel.grid.minor = element_blank(),
+    axis.title = element_text(face = "bold")
+  )
