@@ -8,11 +8,13 @@ Go to: https://github.com/kaaneakdogan/restaurant_survival_analysis/blob/main/co
 
 SIGNIFICANCE OF THIS PROJECT
 
-Read: https://github.com/kaaneakdogan/restaurant_survival_analysis/blob/main/Why%20This%20Matters.md
+Read: 
+https://github.com/kaaneakdogan/restaurant_survival_analysis/blob/main/Why%20This%20Matters.md
 
 RESULTS:
 
-For more detailed analysis of results, read: https://github.com/kaaneakdogan/restaurant_survival_analysis/blob/main/conclusion/results
+For more detailed analysis of results, read: 
+https://github.com/kaaneakdogan/restaurant_survival_analysis/blob/main/conclusion/results
 
 HOW TO REPRODUCE
 
